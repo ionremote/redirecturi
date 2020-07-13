@@ -4,7 +4,9 @@
 <script>
   var redirectToApp = function() {
     //var scheme = "com.google.codelabs.appauth";
-    var scheme = "com.omni.ion.sonos";
+    const params = new URLSearchParams(window.location.search);
+    const scheme = params.get('scheme');
+    //var scheme = "com.omni.ion.sonos";
     var openURL = "oauth2callback" + window.location.pathname + window.location.search + window.location.hash;
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     var Android = /Android/.test(navigator.userAgent);
