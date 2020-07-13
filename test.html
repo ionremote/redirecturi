@@ -1,6 +1,6 @@
 <script>
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
+function getParameterByName(name) {
+    url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
@@ -10,5 +10,6 @@ function getParameterByName(name, url) {
 }
 
 document.write("Testing");
-
+document.write("scheme");
+document.write("END");
 </script>
